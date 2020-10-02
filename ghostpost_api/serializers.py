@@ -6,16 +6,6 @@ from . import models
 class PostSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.BoastsRoastsModel
-        fields = '__all__'
+        fields = ['id','isboast','post_body','post_upvote' ,'post_downvote','date_created','last_update','s_key','total']
 
 
-
-class UpVoteSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = models.BoastsRoastsModel
-        fields = '__all__'
-
-class downVoteSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = models.BoastsRoastsModel
-        fields = '__all__'
